@@ -1,0 +1,131 @@
+/* variables */
+$bgcolor: rgba(0, 0, 0, 0.514);
+$textcolor-white: rgb(255, 255, 255);
+$textcolor-orange: rgb(255, 166, 31);
+$textcolor-orange-light: rgb(253, 215, 158);
+$fontsize: 30px;
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+
+html {
+    width:100vw;
+    height:100vh;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black,
+        -0.07em -0.07em black,
+        -0.07em 0.07em black,
+        0.07em -0.07em black,
+        0.07em 0.07em black;
+
+    body {
+        color: $textcolor-white;
+        background: url('./images/background.jpg');
+        background-size:cover;
+        margin:0;
+        
+   
+
+        .header, .footer {
+            height: 8vh;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            font-size: $fontsize;
+            background-color: $bgcolor;
+            
+        }
+
+        .header {
+            
+            .home-button:hover, .menu-button:hover, .contact-button:hover {
+                color: $textcolor-orange;
+                //color: rgb(178, 210, 224);
+                transform:scale(1.5,1.5);
+
+            }
+            .home-button, .menu-button, .contact-button {
+                margin-right:5vw;
+                margin-left:5vw;
+            }
+    
+        }
+
+        .inner-canvas {
+            // for now it doesn't have contents...we're gonna put a height and width that we will remove later
+            height: 700px;
+            width: 600px;
+            margin:auto;
+            background-color: $bgcolor;
+
+                .big-text {
+                    font-family: "Herr Von Muellerhoff", cursive;
+                    font-size: 150px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    margin-bottom:0;
+                    color:$textcolor-orange;
+                }
+                .smol-text {
+                    font-size: 40px;
+                    font-weight: bold;
+                    margin-top: -50px;
+                    margin-bottom:0px;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    color:$textcolor-orange;
+
+                    
+                }
+                .normie-text {
+                    color:$textcolor-orange-light;
+                    font-size: 20px;
+                }
+
+                hr {
+                    width: 280px;
+                    border: 2px solid #c59d5f;
+                    margin: 24px auto;
+                }
+
+                .button-for-menu {
+                    display:block;
+                    margin:auto;
+                    border: 2px solid #222;
+                    border-radius: 26px;
+                    background-color: $textcolor-orange;
+                    border: 2px solid $textcolor-orange-light;
+                    font-family:'Montserrat', sans-serif;
+                    font-size:70px;
+                    margin-top:20px;
+                    color:whitesmoke;
+                    text-shadow: 6px 6px 0px rgba(0,0,0,0.2)
+             
+                }
+
+                .button-for-menu:hover, .button-for-menu:active {
+                    background-color: $textcolor-orange-light;
+                    border: 2px solid $textcolor-orange-light;
+                }
+
+                /* Adding rounded outline button to menu */
+
+            }
+    }
+}
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+ }
+
+
+.home-canvas {
+
+}
+
