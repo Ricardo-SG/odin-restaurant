@@ -65,8 +65,9 @@ html {
 
         }
 
+
         .canvas-web {
-            min-height:52rem;
+            min-height:80vh;
         }
         // .footer {
         //     bottom: 0;
@@ -90,6 +91,7 @@ html {
         text-align: center;
         text-transform: capitalize;
         margin-bottom:0;
+        margin-top:2rem;
         color:$textcolor-orange;
 
     }
@@ -150,13 +152,15 @@ html {
     /* Grid for all the articles projects */
     .card-canvas {
         margin:auto;
-        max-width: 80vw;
         display:grid;
-        grid-template-columns: repeat(2, minmax(500px, 1fr));
+        width:75%; 
+        grid-template-columns: repeat(2, minmax(450px, 1fr));
         gap:15px;
         
         .card {
+            margin:auto;
             max-height:35rem;
+            max-width:41rem;
             margin: 10px;
             background-color: $bgcolor; 
             border: 1px solid black;  
@@ -170,6 +174,13 @@ html {
             }
         }
         
+    }
+
+    @media only screen and (max-width:1000px){
+        .card-canvas {
+          width:auto;
+
+        }
     }
     
 /* copied from home, candidates to be globalized: */
