@@ -273,5 +273,15 @@ html {
 // }
 
 
+/* Media rules for cellphone */
+@media only screen and (max-width:1000px) {
+    html {
+        width:100vw;
+        height:auto;
 
+        .card-canvas {
+            width:auto;
+        }
+    }
+}
 
