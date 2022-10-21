@@ -1,33 +1,41 @@
 /* variables */
-$bgcolor: rgba(0, 0, 0, 0.514);
+$bgcolor: rgba(0, 0, 0, 0.719);
 $textcolor-white: rgb(255, 255, 255);
 $textcolor-orange: rgb(255, 166, 31);
-$textcolor-orange-light: rgb(253, 215, 158);
+$textcolor-orange-light: rgb(255, 230, 206);
+$text-shadow8:   0.07em 0 black,
+                0 0.07em black,
+                -0.07em 0 black,
+                0 -0.07em black,
+                -0.07em -0.07em black,
+                -0.07em 0.07em black,
+                0.07em -0.07em black,
+                0.07em 0.07em black;
+$text-shadow4:   0.07em 0 black,
+                0 0.07em black,
+                -0.07em 0 black,
+                0 -0.07em black;
+$text-shadow1:   0.07em 0 black;
+              
+               
 $fontsize: 30px;
 @import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:wght@300;400;700&display=swap");
+
+/* global css */
 
 html {
     width:100vw;
     height:100vh;
     text-align:center;
     font-family: 'Montserrat', sans-serif;
-    text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black,
-        -0.07em -0.07em black,
-        -0.07em 0.07em black,
-        0.07em -0.07em black,
-        0.07em 0.07em black;
+
 
     body {
         color: $textcolor-white;
         background: url('./images/background.jpg');
         background-size:cover;
         margin:0;
-        
-   
+          
 
         .header, .footer {
             height: 8vh;
@@ -37,6 +45,7 @@ html {
             align-items: center;
             font-size: $fontsize;
             background-color: $bgcolor;
+            text-shadow: $text-shadow8;
             
         }
 
@@ -53,79 +62,205 @@ html {
                 margin-left:5vw;
             }
     
+
         }
 
-        .inner-canvas {
-            // for now it doesn't have contents...we're gonna put a height and width that we will remove later
-            height: 700px;
-            width: 600px;
-            margin:auto;
-            background-color: $bgcolor;
-
-                .big-text {
-                    font-family: "Herr Von Muellerhoff", cursive;
-                    font-size: 150px;
-                    text-align: center;
-                    text-transform: capitalize;
-                    margin-bottom:0;
-                    color:$textcolor-orange;
-                }
-                .smol-text {
-                    font-size: 40px;
-                    font-weight: bold;
-                    margin-top: -50px;
-                    margin-bottom:0px;
-                    text-align: center;
-                    text-transform: uppercase;
-
-                    color:$textcolor-orange;
-
-                    
-                }
-                .normie-text {
-                    color:$textcolor-orange-light;
-                    font-size: 20px;
-                }
-
-                hr {
-                    width: 280px;
-                    border: 2px solid #c59d5f;
-                    margin: 24px auto;
-                }
-
-                .button-for-menu {
-                    display:block;
-                    margin:auto;
-                    border: 2px solid #222;
-                    border-radius: 26px;
-                    background-color: $textcolor-orange;
-                    border: 2px solid $textcolor-orange-light;
-                    font-family:'Montserrat', sans-serif;
-                    font-size:70px;
-                    margin-top:20px;
-                    color:whitesmoke;
-                    text-shadow: 6px 6px 0px rgba(0,0,0,0.2)
-             
-                }
-
-                .button-for-menu:hover, .button-for-menu:active {
-                    background-color: $textcolor-orange-light;
-                    border: 2px solid $textcolor-orange-light;
-                }
-
-                /* Adding rounded outline button to menu */
-
-            }
+        .canvas-web {
+            min-height:52rem;
+        }
+        // .footer {
+        //     bottom: 0;
+        //     position: fixed;
+        //     width: 100%;
+        //  }
     }
 }
-.footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
- }
+
+/* CSS for Home */
+.inner-canvas.home {
+    height:45rem;
+    width: 600px;
+    margin:auto;
+    background-color: $bgcolor;
 
 
-.home-canvas {
+    .big-text {
+        font-family: "Herr Von Muellerhoff", cursive;
+        font-size: 150px;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom:0;
+        color:$textcolor-orange;
+
+    }
+
+    .smol-text {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: -50px;
+        margin-bottom:0px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color:$textcolor-orange;
+        text-shadow: $text-shadow4;
+
+        
+    }
+
+    .normie-text {
+        display:block;
+        color:$textcolor-orange-light;
+        font-size: 20px;
+    }
+
+    hr {
+        width: 280px;
+        border: 2px solid #c59d5f;
+        margin: 24px auto;
+    }
+
+    .button-for-menu {
+        display:block;
+        margin:auto;
+        border: 2px solid #222;
+        border-radius: 26px;
+        background-color: $textcolor-orange;
+        border: 2px solid $textcolor-orange-light;
+        font-family:'Montserrat', sans-serif;
+        font-size:70px;
+        margin-top:20px;
+        color:whitesmoke;
+        text-shadow: 6px 6px 0px rgba(0,0,0,0.2)
+ 
+    }
+
+    .button-for-menu:hover, .button-for-menu:active {
+        background-color: $textcolor-orange-light;
+        border: 2px solid $textcolor-orange-light;
+    }
+}
+
+/* CSS for Menu */
+.inner-canvas.menu {
+
+    margin:auto;
+
+
+    /* Grid for all the articles projects */
+    .card-canvas {
+        margin:auto;
+        max-width: 80vw;
+        display:grid;
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+        gap:15px;
+        
+        .card {
+            max-height:35rem;
+            margin: 10px;
+            background-color: $bgcolor; 
+            border: 1px solid black;  
+
+            .card-image {
+                max-width:400px;
+                max-height:400px;
+                display:block;
+                margin:auto;
+                margin-bottom:10px;
+            }
+        }
+        
+    }
+    
+/* copied from home, candidates to be globalized: */
+    .big-text {
+        font-family: "Herr Von Muellerhoff", cursive;
+        font-size: 10rem; // cambiado
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom:3rem;
+        margin-top:3rem; // cambiado
+        color:$textcolor-orange;
+        background-color: $bgcolor;
+        text-shadow:$text-shadow1;
+
+    }
+
+    .smol-text {
+        font-size: 2rem; // cambiado 
+        font-weight: bold;
+        //margin-top: -50px; cambiado
+        margin-top:1rem;
+        margin-bottom:1rem; // cambiado
+        text-align: center;
+        text-transform: uppercase;
+
+        color:$textcolor-orange;
+        text-shadow: $text-shadow4;
+
+        
+    }
+
+    .normie-text {
+        margin-bottom:1rem;
+        display:block;
+        color:rgb(250, 153, 43);
+        font-size: 1.5rem;
+        text-shadow:$text-shadow4;
+    }
+                  
 
 }
+/* CSS for contact */
+//.inner-canvas.contact {
+//}
+
+
+
+        
+
+
+               
+
+                
+
+
+//                 /* Grid for all the articles projects */
+//                 .card-canvas {
+//                     max-width: 80vw;
+//                     display:grid;
+//                     grid-template-columns: repeat(2, minmax(400px, 1fr));
+//                     gap:15px;
+
+//                 }
+//                 .card-canvas .card {
+//                     max-width: 600px;
+//                     max-height: 600px;
+//                     margin: 10px;
+                    
+//                     background-color: $bgcolor; 
+//                     border: 1px solid black;  
+//                 }
+
+
+//                 .card p {
+//                 padding:5px;
+//                 }
+
+//                 .card-image {
+//                     max-width:400px;
+//                     max-height:400px;
+//                 }
+
+
+//             }
+//             .menu {
+//                 /* if we're displaying menu, we're overriding inner-canvas properties */
+//                 background-color: rgba(255, 255, 255, 0);
+//             }
+//     }
+// }
+
+
+
 

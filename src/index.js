@@ -2,6 +2,7 @@
 /* Import section --------------------------------------------------- */
 import './styles.scss'; // SCSS styles for our web
 import HomePage from './home.js';
+import MenuPage from './menu.js';
 /* ------------------------------------------------------------------ */
 /* We retrieve the container, that will hold all our web */
 const container = document.getElementById('container');
@@ -21,7 +22,7 @@ homeDiv.addEventListener('click', loadHome);
 const menuDiv = document.createElement('div');
 menuDiv.className = 'menu-button';
 menuDiv.innerText = 'MENU';
-menuDiv.addEventListener('click', () => { console.log('menu-button has been pushed')});
+menuDiv.addEventListener('click', loadMenu);
 
 const contactDiv = document.createElement('div');
 contactDiv.className ='contact-button';
@@ -44,8 +45,8 @@ footer.className ='footer';
 footer.innerText = 'Designed by Ric for The Odin Project';
 container.appendChild(footer);
 
-HomePage.loadHome(canvas);
-
+//HomePage.loadHome(canvas);
+loadHome(canvas);
 
 // Index.js functions
 function cleanCanvas () {
@@ -56,12 +57,15 @@ function cleanCanvas () {
 }
 
 function loadHome() {
-    console.log('ola k ase');
+    console.log('<index.js loadHome>');
     console.log(canvas);
     cleanCanvas();
-    HomePage.loadHome(canvas);
+    HomePage.loadHome(canvas, loadMenu);
 }
 
 function loadMenu () {
-    console.log('yippi ka yei hijos de puta');
+    console.log('<index.js loadMenu>');
+    console.log(canvas);
+    cleanCanvas();
+    MenuPage.loadMenu(canvas);
 };

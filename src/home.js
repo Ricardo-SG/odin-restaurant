@@ -1,7 +1,7 @@
-import Croquetas from './images/croquetas.jpg'; // The croquette (most important element of this web)
+import Croquetas from './images/croquetas_resized.jpg'; // The croquette (most important element of this web)
 /* This code under here will probably be exported into a module */
 /* We're gonna build the home canvas now */
-function loadHome (fatherContainer) {
+function loadHome (fatherContainer, loadMenu) {
 
     /* 1) we define every html element we're gonna put into the canvas */
     const homeCanvas   = document.createElement('div');
@@ -15,7 +15,7 @@ function loadHome (fatherContainer) {
     
 
     /* 2) we put their classes */
-    homeCanvas.className = 'inner-canvas';
+    homeCanvas.className = 'inner-canvas home';
     pTitle1.className    = 'big-text';
     pTitle2.className    = 'smol-text';
     pText.className      = 'normie-text';
@@ -33,7 +33,7 @@ function loadHome (fatherContainer) {
     
 
     /* 4) we put their functions */
-    //btnMenu.onclick = loadMenu;
+    btnMenu.onclick = loadMenu;
 
     /* 5) But it's the pelvic thrust */
     homeTitleDiv.append(pTitle1,pTitle2,separation,pText,myCroqueta,btnMenu);
