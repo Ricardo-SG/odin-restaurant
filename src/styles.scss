@@ -51,13 +51,13 @@ html {
 
         .header {
             
-            .home-button:hover, .menu-button:hover, .contact-button:hover {
+            .home-button:hover, .menu-button:hover, .about-button:hover {
                 color: $textcolor-orange;
                 //color: rgb(178, 210, 224);
                 transform:scale(1.5,1.5);
 
             }
-            .home-button, .menu-button, .contact-button {
+            .home-button, .menu-button, .about-button {
                 margin-right:5vw;
                 margin-left:5vw;
             }
@@ -65,19 +65,13 @@ html {
 
         }
 
-
-        .canvas-web {
-            min-height:80vh;
-        }
-        // .footer {
-        //     bottom: 0;
-        //     position: fixed;
-        //     width: 100%;
-        //  }
     }
 }
 
 /* CSS for Home */
+.canvas-web.home {
+    min-height:60rem;
+}
 .inner-canvas.home {
     height:45rem;
     width: 600px;
@@ -144,6 +138,9 @@ html {
 }
 
 /* CSS for Menu */
+.canvas-web.menu {
+    min-height:50rem;
+}
 .inner-canvas.menu {
 
     margin:auto;
@@ -222,11 +219,83 @@ html {
                   
 
 }
-/* CSS for contact */
-//.inner-canvas.contact {
-//}
+/* CSS for about */
+.canvas-web.about {
+    min-height:51rem;
+}
+.inner-canvas.about {
+    margin-top: 10%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom: 10%;
+    background-color: $bgcolor;
+
+    .about-board {
+        display:flex;
+        justify-content: center;
+        align-content: center;
+
+        #map {
+            width: 90%;
+            height:28rem;
+            margin:5%;
+            
+    
+        }
+    }
+    .about-content {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width:50%;
+        flex-shrink: 0;
+    }
+
+    .smol-text {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom:0px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color:$textcolor-orange;
+        text-shadow: $text-shadow4;
+
+        
+    }
+    hr {
+        width: 280px;
+        border: 2px solid #c59d5f;
+        margin: 24px auto;
+    }
+
+    .normie-text {
+        display:block;
+        color:$textcolor-orange-light;
+        font-size: 2rem;
+        display:inline;
+    }
+
+    .email {
+        font-style:italic;
+        font-weight:bold;
+        display:inline;
+    }
+
+    @media only screen and (max-width:1000px) {
+
+        .smol-text {
+          font-size:18px;
+
+        }
+
+        .normie-text {
+            font-size:18px;
+        }
 
 
+    }
+}
 
         
 
@@ -274,14 +343,18 @@ html {
 
 
 /* Media rules for cellphone */
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:600px) {
     html {
-        width:100vw;
-        height:auto;
+        width:auto;
+        height:600px;
 
+        .canvas-web {
+            min-height: auto;
+        }
         .card-canvas {
             width:auto;
         }
+
     }
 }
 

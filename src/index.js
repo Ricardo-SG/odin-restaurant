@@ -1,8 +1,9 @@
 
 /* Import section --------------------------------------------------- */
 import './styles.scss'; // SCSS styles for our web
-import HomePage from './home.js';
-import MenuPage from './menu.js';
+import HomePage  from './home.js';
+import MenuPage  from './menu.js';
+import AboutPage from './about.js';
 /* ------------------------------------------------------------------ */
 /* We retrieve the container, that will hold all our web */
 const container = document.getElementById('container');
@@ -24,19 +25,18 @@ menuDiv.className = 'menu-button';
 menuDiv.innerText = 'MENU';
 menuDiv.addEventListener('click', loadMenu);
 
-const contactDiv = document.createElement('div');
-contactDiv.className ='contact-button';
-contactDiv.innerText = 'CONTACT';
-contactDiv.addEventListener('click', () => { console.log('contact-button has been pushed')});
+const aboutDiv = document.createElement('div');
+aboutDiv.className ='about-button';
+aboutDiv.innerText = 'ABOUT US';
+aboutDiv.addEventListener('click', loadAbout);
 
 /* We append the three div-buttons to header, since we want em inside */
 header.appendChild(homeDiv);
 header.appendChild(menuDiv);
-header.appendChild(contactDiv);
+header.appendChild(aboutDiv);
 
 /* now, we need a canvas to display our web, it will be behind the header */
 const canvas = document.createElement('div');
-canvas.className = 'canvas-web';
 container.appendChild(canvas);
 
 /* under the canvas we will have a footer, which probably will hold nothing but will have some width/height akin to the header and will have some background color */
@@ -45,8 +45,7 @@ footer.className ='footer';
 footer.innerText = 'Designed by Ric for The Odin Project';
 container.appendChild(footer);
 
-//HomePage.loadHome(canvas);
-loadHome(canvas);
+loadAbout(canvas);
 
 // Index.js functions
 function cleanCanvas () {
@@ -60,6 +59,7 @@ function loadHome() {
     console.log('<index.js loadHome>');
     console.log(canvas);
     cleanCanvas();
+    canvas.className = 'canvas-web home';
     HomePage.loadHome(canvas, loadMenu);
 }
 
@@ -67,5 +67,15 @@ function loadMenu () {
     console.log('<index.js loadMenu>');
     console.log(canvas);
     cleanCanvas();
+    canvas.className = 'canvas-web menu';
     MenuPage.loadMenu(canvas);
 };
+
+function loadAbout () {
+    console.log('<index.js loadAbout>');
+    console.log(canvas);
+    cleanCanvas();
+    canvas.className = 'canvas-web about';
+    AboutPage.loadAbout(canvas);
+};
+
