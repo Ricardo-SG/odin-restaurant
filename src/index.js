@@ -45,7 +45,7 @@ footer.className ='footer';
 footer.innerText = 'Designed by Ric for The Odin Project';
 container.appendChild(footer);
 
-loadAbout(canvas);
+loadHome(canvas);
 
 // Index.js functions
 function cleanCanvas () {

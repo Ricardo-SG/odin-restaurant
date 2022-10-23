@@ -233,27 +233,6 @@ html {
     margin-bottom: 10%;
     background-color: $bgcolor;
 
-    .about-board {
-        display:flex;
-        justify-content: center;
-        align-content: center;
-
-        #map {
-            width: 90%;
-            height:15rem;
-            margin:5%;
-            
-    
-        }
-    }
-    .about-content {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        width:50%;
-        flex-shrink: 0;
-    }
-
     .smol-text {
         font-size: 3rem;
         font-weight: bold;
@@ -266,98 +245,82 @@ html {
 
         
     }
+
     hr {
         width: 280px;
         border: 2px solid #c59d5f;
         margin: 24px auto;
     }
 
-    .normie-text {
-        display:block;
-        color:$textcolor-orange-light;
-        font-size: 1.5rem;
-        display:inline;
-    }
+    .about-board {
+        display:flex;
+        justify-content: center;
+        align-content: center;     
 
-    .email {
-        font-style:italic;
-        font-weight:bold;
-        display:inline;
-    }
+
+
+        .granny-img {
+            border-radius: 8px;
+            max-width:80%;
+            height:auto;
+        }
+    
+    
+        .about-content {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+                width:50%;
+            flex-shrink: 0;
+       
+
+
+
+            .normie-text {
+                display:block;
+                color:$textcolor-orange-light;
+                font-size: 1.5rem;
+                display:inline;
+            }
+
+            .email {
+                font-style:italic;
+                font-weight:bold;
+                display:inline;
+            }
+     }   
+    }   
 
     @media only screen and (max-width:1000px) {
 
         .smol-text {
-          font-size:18px;
+          font-size:36px;
 
         }
 
         .normie-text {
-            font-size:18px;
+            font-size:16px;
         }
 
 
     }
 }
 
-        
 
 
-               
+// /* Media rules for cellphone */
+// @media only screen and (max-width:600px) {
+//     html {
+//         width:auto;
+//         height:600px;
 
-                
+//         .canvas-web {
+//             min-height: auto;
+//         }
+//         .card-canvas {
+//             width:auto;
+//         }
 
-
-//                 /* Grid for all the articles projects */
-//                 .card-canvas {
-//                     max-width: 80vw;
-//                     display:grid;
-//                     grid-template-columns: repeat(2, minmax(400px, 1fr));
-//                     gap:15px;
-
-//                 }
-//                 .card-canvas .card {
-//                     max-width: 600px;
-//                     max-height: 600px;
-//                     margin: 10px;
-                    
-//                     background-color: $bgcolor; 
-//                     border: 1px solid black;  
-//                 }
-
-
-//                 .card p {
-//                 padding:5px;
-//                 }
-
-//                 .card-image {
-//                     max-width:400px;
-//                     max-height:400px;
-//                 }
-
-
-//             }
-//             .menu {
-//                 /* if we're displaying menu, we're overriding inner-canvas properties */
-//                 background-color: rgba(255, 255, 255, 0);
-//             }
 //     }
 // }
-
-
-/* Media rules for cellphone */
-@media only screen and (max-width:600px) {
-    html {
-        width:auto;
-        height:600px;
-
-        .canvas-web {
-            min-height: auto;
-        }
-        .card-canvas {
-            width:auto;
-        }
-
-    }
-}
 
