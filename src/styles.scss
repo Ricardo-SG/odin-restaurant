@@ -24,8 +24,7 @@ $fontsize: 30px;
 /* global css */
 
 html {
-    width:100vw;
-    height:100vh;
+
     text-align:center;
     font-family: 'Montserrat', sans-serif;
 
@@ -70,7 +69,7 @@ html {
 
 /* CSS for Home */
 .canvas-web.home {
-    min-height:60rem;
+    min-height:55rem;
 }
 .inner-canvas.home {
     height:45rem;
@@ -87,6 +86,7 @@ html {
         margin-bottom:0;
         margin-top:2rem;
         color:$textcolor-orange;
+        text-shadow:$text-shadow1;
 
     }
 
@@ -140,6 +140,7 @@ html {
 /* CSS for Menu */
 .canvas-web.menu {
     min-height:50rem;
+
 }
 .inner-canvas.menu {
 
@@ -222,6 +223,8 @@ html {
 /* CSS for about */
 .canvas-web.about {
     min-height:51rem;
+    max-width:1500px;
+    margin:auto;
 }
 .inner-canvas.about {
     margin-top: 10%;
@@ -237,7 +240,7 @@ html {
 
         #map {
             width: 90%;
-            height:28rem;
+            height:15rem;
             margin:5%;
             
     
@@ -272,7 +275,7 @@ html {
     .normie-text {
         display:block;
         color:$textcolor-orange-light;
-        font-size: 2rem;
+        font-size: 1.5rem;
         display:inline;
     }
 

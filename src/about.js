@@ -14,7 +14,6 @@ function loadAbout (fatherContainer) {
     /* 2) We put the ID in the map, for being able to use it */
     map.id = 'map';
     
-
     /* 2) we put their classes */
     aboutCanvas.className    = 'inner-canvas about';
     pTitle1.className        = 'smol-text';
