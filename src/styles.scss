@@ -256,7 +256,8 @@ html {
         display:flex;
         justify-content: center;
         align-content: center;     
-
+        margin-bottom:20px;
+        padding-bottom:20px;
 
 
         .granny-img {
@@ -268,14 +269,12 @@ html {
     
         .about-content {
             display:flex;
+            margin:auto;
             flex-direction: column;
             justify-content: center;
-                width:50%;
+            width:50%;
             flex-shrink: 0;
        
-
-
-
             .normie-text {
                 display:block;
                 color:$textcolor-orange-light;
@@ -290,37 +289,34 @@ html {
             }
      }   
     }   
+}
 
     @media only screen and (max-width:1000px) {
-
+        
+        .about-content {
+            width:80%;
+         }
+         
         .smol-text {
           font-size:36px;
 
         }
+        .about-board {
+            flex-direction:column;
+               .granny-img {
+                border-radius: 8px;
+                max-width:80%;
+                height:auto;
+            }
+        
+        
 
-        .normie-text {
-            font-size:16px;
+            .normie-text {
+                font-size:16px;
+            }
         }
-
-
-    }
 }
 
 
 
-// /* Media rules for cellphone */
-// @media only screen and (max-width:600px) {
-//     html {
-//         width:auto;
-//         height:600px;
-
-//         .canvas-web {
-//             min-height: auto;
-//         }
-//         .card-canvas {
-//             width:auto;
-//         }
-
-//     }
-// }
 
